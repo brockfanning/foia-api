@@ -7,6 +7,7 @@ use Drupal\node\NodeInterface;
 use Drupal\webform\Entity\WebformSubmission;
 use Drupal\webform\Plugin\WebformHandlerManagerInterface;
 use Egulias\EmailValidator\EmailValidator;
+use hbattat\VerifyEmail;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -43,6 +44,13 @@ class FoiaSubmissionServiceEmail implements FoiaSubmissionServiceInterface {
   protected $logger;
 
   /**
+   * The validator of whether the email inbox actually exists.
+   *
+   * @var \hbattat\VerifyEmail
+   */
+  protected $emailExistenceValidator;
+
+  /**
    * Email webform handler.
    *
    * @var \Drupal\foia_webform\Plugin\WebformHandler\FoiaEmailWebformHandler
@@ -74,12 +82,15 @@ class FoiaSubmissionServiceEmail implements FoiaSubmissionServiceInterface {
    *   The email validator.
    * @param \Psr\Log\LoggerInterface $logger
    *   A logger instance.
+   * @param \hbattat\VerifyEmail $emailExistenceValidator
+   *   The validator of whether the email inbox actually exists.
    */
-  public function __construct(AgencyLookupServiceInterface $agencyLookupService, WebformHandlerManagerInterface $webformHandlerManager, EmailValidator $emailValidator, LoggerInterface $logger) {
+  public function __construct(AgencyLookupServiceInterface $agencyLookupService, WebformHandlerManagerInterface $webformHandlerManager, EmailValidator $emailValidator, LoggerInterface $logger, VerifyEmail $emailExistenceValidator) {
     $this->agencyLookupService = $agencyLookupService;
     $this->foiaEmailWebformHandler = $webformHandlerManager->createInstance('foia_email');
     $this->emailValidator = $emailValidator;
     $this->logger = $logger;
+    $this->emailExistenceValidator = $emailExistenceValidator;
   }
 
   /**
@@ -98,6 +109,15 @@ class FoiaSubmissionServiceEmail implements FoiaSubmissionServiceInterface {
 
     if (!$this->emailValidator->isValid($componentEmailAddress)) {
       $error['message'] = 'Invalid Email Address for the component.';
+      $this->addSubmissionError($error);
+      $this->log('warning', $error['message']);
+      return FALSE;
+    }
+
+    $this->emailExistenceValidator->set_email($componentEmailAddress);
+    $this->emailExistenceValidator->set_verifier_email('no-reply@foia.gov');
+    if (!$this->emailExistenceValidator->verify()) {
+      $error['message'] = 'Incorrect Email Address for the component.';
       $this->addSubmissionError($error);
       $this->log('warning', $error['message']);
       return FALSE;
