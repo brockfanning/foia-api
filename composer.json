@@ -6,7 +6,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.1",
-        "acquia/blt": "^8.9.14",
+        "acquia/blt": "~10.0",
         "drupal/webform": "5.0.0-beta19",
         "drupal/address": "~1.0",
         "drupal/field_group": "^1.0@RC",
@@ -16,12 +16,12 @@
         "drupal/migrate_plus": "^4.0",
         "drupal/migrate_tools": "^4.0",
         "drupal/simplesamlphp_auth": "^3.0",
-        "drupal/jsonapi_extras": "2.9",
+        "drupal/jsonapi_extras": "~3.0",
         "drupal/maillog": "1.x-dev#14fd24cd89e299ad271608cd52706c60b753c26d",
         "drupal/restui": "^1.15",
         "drupal/roleassign": "^1.0@alpha",
-        "acquia/lightning": "~3.1.8",
-        "drush/drush": "^8.1.16",
+        "acquia/lightning": "~3.2.8",
+        "drush/drush": "~9.0",
         "drupal/mailsystem": "^4.1",
         "drupal/swiftmailer": "1.0.0-beta1",
         "drupal/rules": "^3.0@alpha",
@@ -30,7 +30,7 @@
         "drupal/password_policy": "^3.0@alpha",
         "drupal/views_data_export": "^1.0",
         "drupal/hsts": "^1.0",
-        "consolidation/robo": "~1.2.4",
+        "consolidation/robo": "~1.0",
         "dompdf/dompdf": "^0.8.2"
     },
     "require-dev": {
@@ -85,8 +85,7 @@
         },
         "patches": {
             "drupal/core": {
-                "Account for null triggering element when validating managed file elements": "https://www.drupal.org/files/issues/validating_managed-2910320-2.patch",
-                "Allow a profile to be installed from existing config": "https://www.drupal.org/files/issues/2788777-91.patch"
+                "Account for null triggering element when validating managed file elements": "https://www.drupal.org/files/issues/validating_managed-2910320-2.patch"
             },
             "drupal/password_policy": {
                 "Config install issues": "https://www.drupal.org/files/issues/password-policy-config-import-field-error-2771129-49-D8.patch",
