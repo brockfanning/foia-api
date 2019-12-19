@@ -8,7 +8,7 @@
         "php": ">=7.2",
         "acquia/blt": "^10.0.0",
         "acquia/drupal-spec-tool": "^2.0.0",
-        "acquia/lightning": "^3.0",
+        "acquia/lightning": "~3.4.1",
         "dompdf/dompdf": "^0.8.2",
         "drupal/acquia_connector": "^1.5.0",
         "drupal/acquia_purge": "^1.0-beta3",
@@ -18,7 +18,6 @@
         "drupal/autosave_form": "^1.0",
         "drupal/cog": "^1.8",
         "drupal/config_split": "^1.0.0",
-        "drupal/core": "^8.7",
         "drupal/cors": "~1.0",
         "drupal/devel": "^2.0.0",
         "drupal/entity_reference_revisions": "^1.7",
@@ -108,8 +107,7 @@
                 "Fix inconsistent date format issues": "https://www.drupal.org/files/issues/password_policy-inconsistent-datetime-formats-2860671-13-D8.patch"
             },
             "drupal/views_data_export": {
-                "Views Data export format path": "https://www.drupal.org/files/issues/2018-04-20/views_data_export_format_path-2957085-19.patch",
-                "Generate a batch": "https://www.drupal.org/files/issues/2789531-116.patch"
+                "Generate a batch": "https://www.drupal.org/files/issues/2019-11-08/2789531-295.views_data_export.Support-for-batch-operations.patch"
             },
             "drupal/schemata": {
                 "Avoid PHP 7.2 warning": "https://www.drupal.org/files/issues/2019-07-08/3063027-5-undefined-offset.patch"
@@ -164,9 +162,6 @@
             "rm -rf vendor composer.lock docroot/core docroot/modules/contrib docroot/profiles/contrib docroot/themes/contrib",
             "@composer clearcache --ansi",
             "@composer install --ansi"
-        ],
-        "post-drupal-scaffold-cmd": [
-            "cd docroot && patch -p1 <../patches/htaccess-saml.patch"
         ]
     }
 }
