@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "92358ad18b202ef76b3879bc583b9397",
+    "content-hash": "4980d9e0747a5135a102d4df87597e34",
     "packages": [
         {
             "name": "acquia/blt",
@@ -814,7 +814,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/fengyuanchen/cropper/zipball/30c58b29ee21010e17e58ebab165fbd84285c685",
-                "reference": "30c58b29ee21010e17e58ebab165fbd84285c685"
+                "reference": "30c58b29ee21010e17e58ebab165fbd84285c685",
+                "shasum": null
             },
             "type": "bower-asset",
             "license": [
@@ -832,7 +833,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/enyo/dropzone/zipball/08b9e0a763b54a685404dea523a9c54242fbe1b9",
-                "reference": "08b9e0a763b54a685404dea523a9c54242fbe1b9"
+                "reference": "08b9e0a763b54a685404dea523a9c54242fbe1b9",
+                "shasum": null
             },
             "type": "bower-asset"
         },
@@ -841,13 +843,14 @@
             "version": "3.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
+                "url": "git@github.com:jquery/jquery-dist.git",
                 "reference": "15bc73803f76bc53b654b9fdbbbc096f56d7c03d"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/15bc73803f76bc53b654b9fdbbbc096f56d7c03d",
-                "reference": "15bc73803f76bc53b654b9fdbbbc096f56d7c03d"
+                "reference": "15bc73803f76bc53b654b9fdbbbc096f56d7c03d",
+                "shasum": null
             },
             "type": "bower-asset",
             "license": [
@@ -865,7 +868,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/kenwheeler/slick/zipball/0f40c9d6a02a5c08b5f4dd80fdada3a854a59bee",
-                "reference": "0f40c9d6a02a5c08b5f4dd80fdada3a854a59bee"
+                "reference": "0f40c9d6a02a5c08b5f4dd80fdada3a854a59bee",
+                "shasum": null
             },
             "require": {
                 "bower-asset/jquery": ">=1.7"
@@ -4542,6 +4546,55 @@
             "homepage": "https://www.drupal.org/project/ctools",
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools"
+            }
+        },
+        {
+            "name": "drupal/custom_sql_migrate_source_plugin",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/custom_sql_migrate_source_plugin.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/custom_sql_migrate_source_plugin-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "eef678ca10fb6c5aec5ae3e2e6b3aa82426f6fc4"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/migrate_plus": "*",
+                "drupal/migrate_tools": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1570121291",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ccx105",
+                    "homepage": "https://www.drupal.org/user/3157639"
+                }
+            ],
+            "description": "Migrations of content via custom SQL string.",
+            "homepage": "https://www.drupal.org/project/custom_sql_migrate_source_plugin",
+            "support": {
+                "source": "https://git.drupalcode.org/project/custom_sql_migrate_source_plugin"
             }
         },
         {
@@ -12655,7 +12708,9 @@
             "version": "1.19.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery-validation/-/jquery-validation-1.19.1.tgz"
+                "url": "https://registry.npmjs.org/jquery-validation/-/jquery-validation-1.19.1.tgz",
+                "reference": null,
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [

@@ -23,6 +23,7 @@
         "drupal/config_split": "^1.0.0",
         "drupal/core-recommended": "^8.8",
         "drupal/cors": "~1.0",
+        "drupal/custom_sql_migrate_source_plugin": "^1.0",
         "drupal/devel": "^2.0.0",
         "drupal/entity_reference_revisions": "^1.7",
         "drupal/entity_reference_views_select": "^1.3",
