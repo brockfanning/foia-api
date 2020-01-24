@@ -1,0 +1,9 @@
+name: FOIA Annual Report Migration
+description: Imports annual report nodes from a MySQL database.
+package: FOIA
+type: module
+core: 8.x
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus
+  - custom_sql_migrate_source_plugin:custom_sql_migrate_source_plugin
