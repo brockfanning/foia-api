@@ -17,6 +17,7 @@ csv_serialization: 1.3.0
 ctools: 3.0.0
 ctools_block: 3.0.0
 datetime: 8.4.5
+dblog: 8.8.1
 diff: 1.0.0-rc1
 editor: 8.4.5
 embed: 1.0.0
@@ -74,6 +75,7 @@ lightning_scheduler: 1.0.0-rc2
 lightning_search: 1.0.0-rc1
 lightning_workflow: 3.3.0
 link: 8.4.5
+maillog: 0.0.0
 mailsystem: 4.1.0
 media: 8.4.5
 media_entity_instagram: 2.0.0-alpha1
