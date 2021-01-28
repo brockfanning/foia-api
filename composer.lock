@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12328b4eb995c3c8500c79f4bd44e4c7",
+    "content-hash": "2ab54d1215cc216a92ef88af781700ef",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4437,10 +4437,10 @@
                     "FOIA-32: Dynamically provide action plugins for every moderation state change": "https://www.drupal.org/files/issues/2019-11-20/2797583_provide_moderation_states_as_actions_128.patch",
                     "FOIA-32: Exclude Agency/Component from validation for bulk publishing": "./patches/FOIA-32-validator.patch",
                     "Fix type error in jsonapi, see https://www.drupal.org/project/drupal/issues/2996114": "https://www.drupal.org/files/issues/2019-12-03/2996114-99.patch",
-                    "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch",
-                    "2815221 - Add quickedit to the latest-revision route": "https://www.drupal.org/files/issues/2019-11-27/2815221-125.patch",
+                    "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch",
                     "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2021-01-14/3143958-11-subprofile-support-8.9.x.patch",
-                    "REMOVE: Allow installation profile to be changed from Lightning during config sync": "https://www.drupal.org/files/issues/2021-01-21/3143958-12-change-profile-config-sync-9.1.x.patch"
+                    "REMOVE: Allow installation profile to be changed from Lightning during config sync": "https://www.drupal.org/files/issues/2021-01-21/3143958-12-change-profile-config-sync-9.1.x.patch",
+                    "2815221 - Add quickedit to the latest-revision route": "https://www.drupal.org/files/issues/2019-11-27/2815221-125.patch"
                 }
             },
             "autoload": {
@@ -12404,6 +12404,45 @@
             "time": "2020-05-20T16:45:56+00:00"
         },
         {
+            "name": "lcatlett/blt-ddev",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lcatlett/blt-ddev.git",
+                "reference": "773a2795d9ae4f8bb215726a48ab0e6685fb953b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lcatlett/blt-ddev/zipball/773a2795d9ae4f8bb215726a48ab0e6685fb953b",
+                "reference": "773a2795d9ae4f8bb215726a48ab0e6685fb953b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lcatlett\\BltDdev\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lindsey Catlett",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "ddev integration for Acquia BLT",
+            "homepage": "https://github.com/lcatlett/blt-ddev",
+            "keywords": [
+                "acquia",
+                "blt",
+                "ddev"
+            ],
+            "time": "2020-01-22T17:30:03+00:00"
+        },
+        {
             "name": "lcobucci/jwt",
             "version": "3.4.3",
             "source": {
@@ -20296,7 +20335,8 @@
         "drupal/roleassign": 15,
         "drupal/rules": 15,
         "drupal/simplesamlphp_auth": 20,
-        "drupal/view_unpublished": 15
+        "drupal/view_unpublished": 15,
+        "lcatlett/blt-ddev": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

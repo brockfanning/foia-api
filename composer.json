@@ -58,6 +58,7 @@
         "drupal/views_data_export": "^1.0.0-beta1",
         "drupal/webform": "^5.2",
         "drush/drush": "~9.0",
+        "lcatlett/blt-ddev": "dev-master",
         "npm-asset/jquery-validation": "^1.19"
     },
     "require-dev": {

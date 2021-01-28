@@ -5,8 +5,8 @@ project:
   profile:
     name: lightning
   local:
-    protocol: http
-    hostname: local-api.foia.doj.gov
+    protocol: https
+    hostname: foia-api.ddev.site
 git:
   default_branch: acquia-develop
   remotes:
