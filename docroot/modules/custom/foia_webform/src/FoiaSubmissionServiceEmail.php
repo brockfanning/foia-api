@@ -118,6 +118,9 @@ class FoiaSubmissionServiceEmail implements FoiaSubmissionServiceInterface {
    */
   protected function assembleEmailMessage(FoiaRequestInterface $foiaRequest) {
     $this->webformSubmission = WebformSubmission::load($foiaRequest->get('field_webform_submission_id')->value);
+    if (empty($this->webformSubmission)) {
+      die($foiaRequest->id());
+    }
     $webform = $this->webformSubmission->getWebform();
     $this->foiaEmailWebformHandler->setWebform($webform);
     $messageToSend = $this->foiaEmailWebformHandler->getEmailMessage($foiaRequest->id(), $this->webformSubmission, $this->agencyComponent);
